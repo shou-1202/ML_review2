@@ -1,0 +1,16 @@
+{
+  "_about": "Per-interval transition probabilities for the Shako Decision Tree maps. Shako_Sentinel2_Markov.ipynb computes these (pair_probs) but only draws them as a figure, 'Transition probabilities between consecutive dates' (Markov Cell 1, second figure); it never prints them as text. The values below are the 3-decimal annotations in that figure, transcribed cell by cell. The backend checks them on every load: each row must sum to 1 (±0.002), and weighting them by the printed class areas must reproduce the notebook's printed pooled matrix P.",
+  "source_figure": "static/figures/u4/markov_transition_matrices_by_period.png",
+  "classes": ["Glacier", "Glacial Lake", "Non-Glacier Land"],
+  "decimals": 3,
+  "periods": [
+    {"from": "2025-11-14", "to": "2025-11-19", "P": [[0.882, 0.000, 0.118], [0.000, 0.933, 0.067], [0.018, 0.001, 0.981]]},
+    {"from": "2025-11-19", "to": "2025-11-24", "P": [[0.904, 0.000, 0.096], [0.002, 0.976, 0.022], [0.026, 0.002, 0.972]]},
+    {"from": "2025-11-24", "to": "2025-11-29", "P": [[0.905, 0.000, 0.095], [0.002, 0.942, 0.056], [0.024, 0.001, 0.976]]},
+    {"from": "2025-11-29", "to": "2025-12-04", "P": [[0.892, 0.000, 0.108], [0.004, 0.971, 0.025], [0.025, 0.002, 0.973]]},
+    {"from": "2025-12-04", "to": "2025-12-09", "P": [[0.894, 0.000, 0.106], [0.002, 0.941, 0.057], [0.022, 0.001, 0.977]]},
+    {"from": "2025-12-09", "to": "2025-12-14", "P": [[0.892, 0.000, 0.108], [0.403, 0.480, 0.117], [0.028, 0.000, 0.972]]},
+    {"from": "2025-12-14", "to": "2025-12-19", "P": [[0.868, 0.030, 0.102], [0.000, 0.992, 0.008], [0.028, 0.003, 0.968]]},
+    {"from": "2025-12-19", "to": "2025-12-24", "P": [[0.895, 0.001, 0.104], [0.013, 0.960, 0.026], [0.026, 0.001, 0.973]]}
+  ]
+}

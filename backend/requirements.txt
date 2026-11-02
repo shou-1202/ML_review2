@@ -1,0 +1,9 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+numpy>=1.26
+pillow>=10.0
+# only needed for the optional /u3/rerun and /u4/rerun endpoints
+pandas>=2.0
+scipy>=1.11
+scikit-learn>=1.4
+rasterio>=1.3

@@ -1,0 +1,8 @@
+node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+.venv/
+backend/static/figures/u4/classified/
+backend/data/inputs/kmeans/*.csv
+backend/data/inputs/markov/*.tif

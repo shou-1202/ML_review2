@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-snow font-sans text-ink antialiased;
+  font-size: 16px;
+  line-height: 1.65;
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* Numeric / data values use tabular figures so columns of numbers align */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Visible keyboard focus everywhere, styled rather than suppressed */
+:focus-visible {
+  outline: 2px solid theme("colors.coral.DEFAULT");
+  outline-offset: 2px;
+}
+
+::selection {
+  background: theme("colors.ice");
+  color: theme("colors.midnight");
+}
+
+@layer components {
+  .page-x {
+    @apply mx-auto w-full max-w-page px-5 sm:px-8 lg:px-12;
+  }
+
+  /* Display serif used for every large heading */
+  .display {
+    @apply font-serif font-medium uppercase;
+    font-feature-settings: "lnum" 1, "kern" 1;
+  }
+
+  /* Small scientific metadata (brief: monospace labels) */
+  .meta {
+    @apply font-mono text-[12px] uppercase tracking-[0.14em];
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm px-6 py-3.5 text-[12.5px] font-semibold uppercase tracking-[0.16em] transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-coral {
+    @apply bg-coral text-midnight hover:bg-[#ff8670];
+  }
+  .btn-ghost-dark {
+    @apply border border-white/45 text-white hover:border-white hover:bg-white/10;
+  }
+  .btn-ghost-light {
+    @apply border border-navy/40 text-navy hover:border-navy hover:bg-navy hover:text-white;
+  }
+  .btn-sm {
+    @apply px-4 py-2.5 text-[11.5px];
+  }
+
+  /* Body copy inside stage panels */
+  .prose-panel {
+    @apply text-[15.5px] leading-[1.7] text-muted;
+  }
+  .prose-panel strong,
+  .prose-panel .em {
+    @apply font-semibold text-ink;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
